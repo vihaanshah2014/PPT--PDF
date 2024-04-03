@@ -1,9 +1,13 @@
 import sys
 import os
 import comtypes.client
-from flask import Flask, request, send_file
+from flask import Flask, request, send_file, jsonify
 
 app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return jsonify({"message": "Welcome to the PowerPoint to PDF Conversion API"})
 
 @app.route('/convert', methods=['POST'])
 def convert_ppt_to_pdf():
