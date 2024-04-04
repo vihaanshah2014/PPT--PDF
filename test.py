@@ -4,7 +4,7 @@ import requests
 url = "https://b9d9-128-6-37-87.ngrok-free.app/convert"
 
 # Path to the PowerPoint file you want to convert
-ppt_file_path = "path/to/your/powerpoint/file.pptx"
+ppt_file_path = "testing.pptx"
 
 # Open the PowerPoint file in binary mode
 with open(ppt_file_path, "rb") as ppt_file:

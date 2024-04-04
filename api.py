@@ -38,4 +38,11 @@ def convert_ppt_to_pdf():
     return send_file(output_file_path, as_attachment=True)
 
 if __name__ == '__main__':
-    app.run()
+    from wsgiref.simple_server import make_server
+    
+    # Create a WSGI server
+    server = make_server('localhost', 5000, app)
+    print("Serving on http://localhost:5000")
+
+    # Start the server
+    server.serve_forever()
